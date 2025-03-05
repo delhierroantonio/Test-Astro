@@ -1,10 +1,46 @@
 ---
+import type { map } from "astro:schema";
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "My About Page | Dynamic"
+const identity = {
+  firstName: 'Antonio',
+  lastName: 'Del Hierro',
+  occupation: 'Software Developer',
+  hobbies: ['videogames', 'gardening', 'carpentry', 'programming'],
+};
+
+const skills = ['html', 'css', 'javascript', 'react', 'nodejs', 'astro'];
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <Layout>
-  <h2>About Page</h2>
+  <h2>{pageTitle}</h2>
   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure doloribus qui voluptatem natus commodi nemo amet voluptate beatae iste quis.</p>
 	<a href="/">Home</a>
   <a href="/blog">Blog</a>
+
+  <div>
+    <h3>Here you'll find some facts about me: </h3>
+    <p>Hello my name is {identity.firstName}</p>
+    <ul>
+      {identity.hobbies.length >= 2 &&
+        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+      }
+    </ul>
+    <p>My skills are: </p>
+    <ul>
+      {skills.map(el => <li>{el}</li>)}
+    </ul>
+  </div>
+  <div>
+    {happy && <p>¡Estoy feliz de aprender Astro!</p>}
+
+{finished && <p>¡He terminado este tutorial!</p>}
+
+{goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
+  </div>
 </Layout>
