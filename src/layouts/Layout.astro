@@ -1,3 +1,12 @@
+---
+import '../styles/global.css'
+import Navigation from '../components/Navigation.astro'
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+
+const { title = 'This title is being rendered dynamically' } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,11 +14,16 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Tutorial</title>
+		<title>{title}</title>
 	</head>
 	<body>
+		<Hero />
 		<slot />
+		<Footer />
 	</body>
+	<script>
+		import '../scripts/menu.js'
+	</script>
 </html>
 
 <style>

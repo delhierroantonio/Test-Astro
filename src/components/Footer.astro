@@ -1,0 +1,20 @@
+---
+// ? import
+
+const links = ['home', 'about', 'blog', 'contact'];
+const platform = 'github';
+const user = 'delhierroantonio';
+---
+
+<footer class="bg-teal-950  text-teal-50">
+<div class="container flex flex-col md:flex-row justify-between items-center px-4 py-2 mx-auto">
+  <img src="https://astro.build/assets/press/astro-logo-light.svg" alt="astro logo" class="max-w-40 cursor-pointer hover:scale-[1.04] transition-transform">
+  <ul class="flex justify-between items-center gap-4">
+    {links.map(el => <li><a href={`/${el}`} class="transition-colors hover:text-slate-50 capitalize ">{el}</a></li>)}
+  </ul>
+</div>
+<hr class="text-teal-50 opacity-30 py-2">
+<div class="w-full px-4 py-2 mx-auto">
+  <p class="text-slate-50 text-center font-mono font-medium">Learn more about my projects at <a href={`https://www.${platform}.com/${user}`} class="text-teal-200 transition-colors duration-150 hover:text-teal-300">{platform}</a>!</p>
+</div>
+</footer>

@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 import type { map } from "astro:schema";
 import Layout from "../layouts/Layout.astro";
 
@@ -18,8 +20,8 @@ const goal = 3;
 ---
 
 <Layout>
-  <h2>{pageTitle}</h2>
   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure doloribus qui voluptatem natus commodi nemo amet voluptate beatae iste quis.</p>
+  <h2 class="text-3xl text-pink-900">{pageTitle}</h2>
 	<a href="/">Home</a>
   <a href="/blog">Blog</a>
 
@@ -28,12 +30,12 @@ const goal = 3;
     <p>Hello my name is {identity.firstName}</p>
     <ul>
       {identity.hobbies.length >= 2 &&
-        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+        <li class="skills">Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
       }
     </ul>
-    <p>My skills are: </p>
+    <p class="text-pink-400">My skills are: </p>
     <ul>
-      {skills.map(el => <li>{el}</li>)}
+      {skills.map(el => <li class="skills">{el}</li>)}
     </ul>
   </div>
   <div>
