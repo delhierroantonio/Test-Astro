@@ -3,12 +3,14 @@ import Layout from "../layouts/Layout.astro";
 const pageTitle = 'Custom Blog Page'
 ---
 
-<Layout>
-  <h2>{pageTitle}</h2>
+<Layout title={pageTitle}>
+  <h2 class="text-2xl text-center text-blue-900 font-semibold">{pageTitle}</h2>
   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus magnam perspiciatis et impedit officia sapiente nobis autem numquam praesentium nisi?</p>
-	<a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/posts/post-1/">Post 1</a>
-  <a href="/posts/post-2/">Post 2</a>
-  <a href="/posts/post-3/">Post 3</a>
+  <div class="w-full container mx-auto py-4 flex justify-center items-center gap-8 text-blue-700 font-medium bg-slate-200">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/posts/post-1/">Post 1</a>
+    <a href="/posts/post-2/">Post 2</a>
+    <a href="/posts/post-3/">Post 3</a>
+  </div>
 </Layout>

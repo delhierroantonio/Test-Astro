@@ -1,17 +1,14 @@
 ---
+layout: '../../layouts/MarkDownPostLayout.astro'
 title: 'My first post in the blog'
 pubDate: 2025-03-4
 description: 'This is my first post in my new blog built with Astro'
 author: 'Antonio Del Hierro'
 image: 
-  url: 'https://docs.astro.build/assets/full-logo-light.png'
+  url: 'https://docs.astro.build/assets/full-logo-dark.png'
   alt: 'The compelte Astro logo'
 tags: ["astro", "blogging", "Learn in public"]
 ---
-
-# My first post in the blog
-
-Publish in: 2025-03-04
 
 !Welcome to my _new_blog about the learning process in Astro, here I'll learn my learning process with everybody as I'm building my own website.
 
@@ -23,4 +20,4 @@ Publish in: 2025-03-04
 
 ## Next steps
 
-I'll finish the Astro tutorial, hten i"ll keep adding more pages to my website.
+I will finish the Astro tutorial, then I will keep adding more pages to my website.
